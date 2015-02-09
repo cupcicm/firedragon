@@ -14,4 +14,17 @@ class EntryTest < ActiveSupport::TestCase
     assert_equal "xM", entries(:fourty_two).to_param
   end
 
+  def test_url_recognition
+    entry = Entry.create(data: "http://example.com")
+    assert_equal "url", entry.data_type
+
+    entry = Entry.create(data: "https://example.com")
+    assert_equal "url", entry.data_type
+  end
+
+  def test_failed_recognition
+    entry = Entry.create(data: "Lorem Ipsum")
+    assert_equal "text", entry.data_type
+  end
+
 end
