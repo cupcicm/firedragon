@@ -12,7 +12,12 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
 gem 'hashids', '~> 1.0.0'
+gem 'haml'
 
+
+group :development do
+  gem 'haml-rails'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -11,4 +11,8 @@ class Entry < ActiveRecord::Base
     Hasher.encode(self.id)
   end
 
+  def to_param
+    hash_id
+  end
+
 end
