@@ -8,6 +8,17 @@ class EntriesController < ApplicationController
     @entry = Entry.find_by_hash_id(params[:id])
   end
 
+  def resolve
+    @entry = Entry.find_by_hash_id(params[:path])
+
+    case @entry.data_type
+    when "url"
+      redirect_to @entry.data
+    else
+      render text: "You can't do that"
+    end
+  end
+
   def create
     @entry = Entry.new(entry_params)
 

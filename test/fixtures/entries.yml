@@ -1,4 +1,6 @@
 fourty_two: 
   id: 42
+  data: 'https://example.org/'
+  data_type: 'url'
   created_at: <%= 1.minute.ago %>
   updated_at: <%= 1.minute.ago %>

@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   resources :entries, except: [:new, :edit, :update, :destroy]
 
+  # Handle short URLs
+  match "*path", to: 'entries#resolve', via: :all
+
 end
