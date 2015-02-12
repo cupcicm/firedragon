@@ -1,4 +1,11 @@
-= form_for @entry do |f|
-  = f.text_field :data
+.inner.cover
+  = form_for @entry do |f|
+    .input-group
+      = f.text_field :data, class: 'form-control input-lg', placeholder: "Enter a URL to shorten..."
+      %span.input-group-btn
+        %button.btn.btn-lg.btn-default Do it
 
-  = f.submit "Do it"
+:javascript
+  $(document).ready(function() {
+    $('input#entry_data').focus();
+  });
