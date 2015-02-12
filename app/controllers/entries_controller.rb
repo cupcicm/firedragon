@@ -13,7 +13,7 @@ class EntriesController < ApplicationController
 
     case @entry.data_type
     when "url"
-      redirect_to @entry.data
+      redirect_to @entry.data, status: 301
     else
       render text: "You can't do that"
     end
