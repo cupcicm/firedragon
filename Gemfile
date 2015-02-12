@@ -37,3 +37,7 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'mocha', require: false
 end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
