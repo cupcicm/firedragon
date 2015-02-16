@@ -1,2 +1,12 @@
-%pre
-  = @entry.inspect
+.inner.covered
+  %h3 Short URL Statistics
+
+  %dl
+    %dt Short URL
+    %dd <code>#{short_url(@entry)}</code>
+
+    %dt Original URL
+    %dd <code>#{@entry.data}</code>
+
+    %dt Shortened on
+    %dd= "#{time_ago_in_words(@entry.created_at)} ago on #{l(@entry.created_at.to_date, format: :long)}"
