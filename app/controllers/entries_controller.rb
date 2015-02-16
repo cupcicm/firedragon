@@ -13,6 +13,7 @@ class EntriesController < ApplicationController
 
     case @entry.data_type
     when "url"
+      impressionist(@entry, 'redirect')
       redirect_to @entry.data, status: 301
     else
       render text: "You can't do that"

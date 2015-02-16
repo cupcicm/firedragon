@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150216103421) do
+ActiveRecord::Schema.define(version: 20150216104200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "entries", force: :cascade do |t|
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.text     "data"
-    t.string   "data_type",  limit: 16, default: "unknown"
+    t.string   "data_type",         limit: 16, default: "unknown"
+    t.integer  "impressions_count",            default: 0
   end
 
   create_table "impressions", force: :cascade do |t|

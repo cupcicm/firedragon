@@ -1,5 +1,7 @@
 class Entry < ActiveRecord::Base
 
+  is_impressionable
+
   before_create :determine_data_type
 
   # Find an entry given its hash Id
