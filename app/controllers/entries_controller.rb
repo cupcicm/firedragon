@@ -9,7 +9,7 @@ class EntriesController < ApplicationController
   end
 
   def resolve
-    @entry = Entry.find_by_hash_id(params[:path])
+    @entry = Entry.find_by_hash_id(params[:hash_id])
 
     case @entry.data_type
     when "url"

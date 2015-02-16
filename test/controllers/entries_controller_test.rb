@@ -7,7 +7,7 @@ class EntriesControllerTest < ActionController::TestCase
   end
 
   def test_resolve_redirect
-    get :resolve, path: 'xM'
+    get :resolve, hash_id: 'xM'
 
     assert_redirected_to entry.data
     assert_response 301

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 gem 'rails', '4.2.0'
@@ -14,6 +15,7 @@ gem 'jquery-rails'
 gem 'hashids', '~> 1.0.0'
 gem 'haml'
 
+gem 'rails-assets-bootstrap'
 
 group :development do
   gem 'haml-rails'
