@@ -10,3 +10,6 @@
 
     %dt Shortened on
     %dd= "#{time_ago_in_words(@entry.created_at)} ago on #{l(@entry.created_at.to_date, format: :long)}"
+
+    %dt Redirects
+    %dd= @entry.impressionist_count

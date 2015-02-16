@@ -9,6 +9,10 @@ class RegisterImpressionsTest < Capybara::Rails::TestCase
     visit '/xM'
 
     assert_equal 1, entry.impressionist_count
+
+    visit "entries/xM"
+
+    assert page.has_content?("Redirects 1")
   end
 
 end
