@@ -17,6 +17,8 @@ gem 'haml'
 
 gem 'rails-assets-bootstrap'
 
+gem 'impressionist'
+
 group :development do
   gem 'haml-rails'
 end
