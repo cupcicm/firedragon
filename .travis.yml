@@ -1,0 +1,14 @@
+language: ruby
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database firedragon_test;' -U postgres
+script: bundle exec rake test
+addons:
+  postgresql: "9.3"
+rvm:
+  - 2.1
+  - 2.2
+  - ruby-head
+matrix:
+  allow_failures:
+    - rvm: ruby-head
