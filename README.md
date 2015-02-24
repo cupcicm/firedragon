@@ -1,6 +1,6 @@
 ## Firedragon
 
-[![Circle CI](https://circleci.com/gh/ariejan/firedragon/tree/master.svg?style=svg&circle-token=1d90c96547f475a82ffdcf0e16cb66753eea4484)](https://circleci.com/gh/ariejan/firedragon/tree/master)
+[![Build Status](https://travis-ci.org/ariejan/firedragon.svg?branch=master)](https://travis-ci.org/ariejan/firedragon)
 
 _Firedragon - sharing stuff online._
 
